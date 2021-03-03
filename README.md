@@ -3,4 +3,4 @@
 
 ## [JavaScript][JavaScript]
 
-[JavaScript]: ./JavsScript
+[JavaScript]: /JavaScript
