@@ -12,9 +12,9 @@
 ---
 ## [Algorithm][Algorithm]
 ---
-## [Nomad Coder][Nomad Coder]
+## [NomadCoder][NomadCoder]
 ---
 [JavaScript]: /JavaScript
 [React]: /React
 [Algorithm]: /Algorithm
-[Nomad Coder]: /Nomad Coder
+[NomadCoder]: /NomadCoder
