@@ -3,7 +3,7 @@
 
 
 목차
-[JavaScript]: /JavaScript
+
 
 ## [JavaScript][JavaScript]
 
@@ -12,3 +12,5 @@
 ## [Algorithm][Algorithm]
 
 ## [Nomad Coder][Nomad Coder]
+
+[JavaScript]: /JavaScript
