@@ -16,5 +16,5 @@
 ---
 [JavaScript]: /JavaScript
 [React]: /React
-[Algorithm] : /Algorithm
-[Nomad Coder] : /Nomad Coder
+[Algorithm]: /Algorithm
+[Nomad Coder]: /Nomad Coder
