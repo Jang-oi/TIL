@@ -9,9 +9,9 @@
 ---
 
 ## [JavaScript][JavaScript]
----
 
 * [자바스크립트 기초](https://github.com/Jang-oi/TIL/blob/main/JavaScript/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EA%B8%B0%EC%B4%88.md)
+---
 ## [React][React]
 ---
 ## [Algorithm][Algorithm]
