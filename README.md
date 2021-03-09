@@ -2,7 +2,8 @@
 ---
 >📝Today I Learned. 꾸준히 기록하자.
 >
->오늘 배우고 알게 된 내용을 이해한 만큼 작성하자.  
+>오늘 배우고 알게 된 내용을 이해한 만큼 작성하자.
+>의식해서 하루에 한 글자라도 작성하자.
 
 ---
 목차
@@ -15,6 +16,7 @@
 * [Promise](https://github.com/Jang-oi/TIL/blob/main/JavaScript/Promise.md)
 ---
 ## [React][React]
+
 ---
 ## [Algorithm][Algorithm]
 
@@ -25,6 +27,7 @@
 * [바닐라 JS로 크롬 앱 만들기](https://github.com/Jang-oi/TIL/tree/main/NomadCoder/%EB%B0%94%EB%8B%90%EB%9D%BC%20JS%EB%A1%9C%20%ED%81%AC%EB%A1%AC%20%EC%95%B1%20%EB%A7%8C%EB%93%A4%EA%B8%B0)
 ---
 ## [DreamCoding][DreamCoding]
+
 ---
 
 [JavaScript]: /JavaScript
