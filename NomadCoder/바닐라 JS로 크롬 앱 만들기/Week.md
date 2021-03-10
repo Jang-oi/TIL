@@ -60,22 +60,23 @@
 * 안정적, 변하지 않는 것
 
 ### Data Types
+
 * 변수 선언할 때는 기본으로 const 로 사용! 필요 할 때만 let
 * Camel case 방식으로 선언해야함 변수명은 언제나 소문자로 시작해서 중간에 스페이스 대신 대문자로 쓴다.
-  * ex) daysOfWeek
+    * ex) daysOfWeek
 
 * String
-    * Text String 의미 
+    * Text String 의미
     * const date = "2021.03.09";
-    
+
 * Boolean
     * True / False
-    * 바이너리 세계에선 0,1로 구분 true 1 / false 0 
+    * 바이너리 세계에선 0,1로 구분 true 1 / false 0
     * const a = true;
-    
+
 * Number
     * const num = 200;
-    
+
 * Float
     * Floating Number 의 줄임 말. 소수 표현
     * const a = 1.2;
@@ -86,14 +87,135 @@
     * 컴퓨터는 사람이 아니기 때문에 0부터 세서 수요일을 꺼내고 싶으면 console.log(daysOfWeek[2])으로 해야함.
 
 * Object
-  * Array 와의 차이는 각 value 에 이름을 줄 수 있음.
-  * {} 컬리브라켓을 사용해서 선언
-  * const info = { name :"jh", age : "29" }
-  * console.log(Info.name) 으로 이름 값 출력 가능
-  * const 로 선언되어서 info 자체는 못바꾸지만 안에 있는 값은 변경 가능
+    * Array 와의 차이는 각 value 에 이름을 줄 수 있음.
+    * {} 컬리브라켓을 사용해서 선언
+    * const info = { name :"jh", age : "29" }
+    * console.log(Info.name) 으로 이름 값 출력 가능
+    * const 로 선언되어서 info 자체는 못바꾸지만 안에 있는 값은 변경 가능
 
 ---
 
 # 3일차
 
 ---
+
+### Function
+
+* 어떤 것의 기능, 기능 적인 것.
+* 한 코드 조각으로 원하는 만큼 쓸 수 있는 코드
+* 자바스크립트에서의 정의
+
+```javascript
+// 함수를 정의하는 방법
+function sayHello() {
+    console.log('Hello!');
+}
+
+// 함수를 실행하면 Hello! 가 출력
+sayHello();
+// log 도 함수, console object 안에 있는 함수
+console.log("Hi")
+```
+
+### Argument
+
+* 함수는 인자(argument) 를 받는다.
+* 변수 같은 것. 우리가 주는 값을 받음
+
+```javascript
+// potato의 값은 우리가 원하는 값 아무거나 가능
+// 변수명이며 parameter, argument 라 함
+function sayHello(potato) {
+    console.log('Hello!', potato);
+//console.log 는 2개의 argumnet 를 받고 있다.
+}
+
+sayHello("Nicolas");
+
+// 출력 -> Hello! Nicolas
+function sayHello(name, age) {
+    console.log('Hello!', name, "you have", age);
+}
+
+sayHello("Nicolas", 15);
+// 출력 -> Hello! Nicolas you have 15
+```
+
+### More Function
+
+* ` (백틱) 으로 사용하는 방법.
+
+```javascript
+function sayHello(name, age) {
+    console.log(`Hello ${name} you are ${age} years old`);
+}
+
+sayHello("Nicolas", 15);
+// 출력 -> Hello! Nicolas you are 15 years old
+```
+
+### return
+
+* 내가 돈을 내면 반드시 잔돈을 받는 느낌
+
+```javascript
+function sayHello(name, age) {
+    console.log(`Hello ${name} you are ${age} years old`);
+}
+
+const greetNicolas = sayHello("Nicolas", 15)
+// greetNicolas 는 sayHello 함수의 리턴 값
+// greetNicolas 는 sayHello 를 실행된 결과 값
+console.log(greetNicolas)
+// undefined 
+// sayHello 함수는 console.log 로 인해 이미 출력이 끝남
+// 결과적으로 return 값이 없기 때문에 정의되는 것이 없다는 undefined가 출력
+
+// sayHello 함수에 console.log 가 아닌 return 값을 넣으면
+console.log(greetNicolas)
+// 정상적으로 출력함.
+
+// console.log 와 같이 calculator.plus (5, 5) 와 같이 만들어보자.
+const calculator = {
+    plus: function (a, b) {
+        return a + b;
+    }
+}
+const plus = calculator.plus(5, 5)
+console.log(plus)
+
+// console, calculator 두개 다 object 이며 log(), plus() 둘 다 function
+```
+
+### JS DOM Functions
+
+* Document Object Model
+* 자바스크립트는 html 태그를 가져다가 객체로 만들어줌
+* 우리가 배울 모든 함수들, 우리가 찾게 될 모든 객체들의 함수들 DOM 형태로 변경 가능
+* document 또한 object document. << 을 쓰면 많은 function 들이 나옴
+
+### Modifying the DOM with JS
+
+* console.dir(document, 선언한 객체?) 을 하면 모든 이벤트(함수)가 다 나옴
+* HTML 을 수정하고 어떻게 숨기고 click 을 감지하는 지 등이 다 가능함
+* querySelector은 노드의 첫번 째 자식을 반환함 그 의미는 document 로 가서 모든 자식들 중에서 찾으려고한다.
+* document.querySelector("#title") < id 로 찾음 class 로 찾고싶으면 (".title') 이런식으로 편하게 가능
+
+### Events and event handlers
+
+* 이벤트는 웹 사이트에서 발생하는 것들을 말함
+  * click, resize, submit, input, change, load, closing 등 모두 이벤트
+* 이벤트를 가로 챌 수 있음 
+* 자바스크립트는 이벤트를 받기를 기다리고 있다.
+```javascript
+function handleResize() {
+    console.log("I have been resized")
+}
+
+window.addEventListener("resize", handleResize);
+// addEventListener 은 이벤트, 이벤트에서 다룰 함수를 적음(listner)
+// window resize 는 handleResize 를 호출
+// handleReisze() 라고 하면 지금 바로 호출 하라는 의미
+// handleResize 는 함수를 호출. 내가 필요한 시점에, 이벤트가 발생한 시점에
+
+```
