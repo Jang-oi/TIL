@@ -217,5 +217,55 @@ window.addEventListener("resize", handleResize);
 // window resize 는 handleResize 를 호출
 // handleReisze() 라고 하면 지금 바로 호출 하라는 의미
 // handleResize 는 함수를 호출. 내가 필요한 시점에, 이벤트가 발생한 시점에
-
 ```
+---
+
+# 4일차
+
+---
+
+### If, else, and, or
+
+* if-else 는 같은 컨셉으로 모든 프로그래밍 언어에 있다고 봐도됨
+* and = 조건이 전부 참 or = 조건 중 하나라도 참
+* MDN 활용!
+
+---
+
+# 5일차
+
+---
+
+### Marking a JS Clock part One
+
+* 현재 시간을 보여주는 JS 파일을 만듬.
+* 하지만 이 방법은 const date = new Date()를 선언한 시점의 시간이 저장 되기 때문에
+새로고침 하지 않는 이상 업데이트가 안됨 업데이트는 part Two 에서..
+```javascript
+const clockContainer = document.querySelector(".js-clock"),
+    clockTitle = clockContainer.querySelector(".js-title");
+
+function getTiME() {
+    const date = new Date();
+    const minutes = date.getMinutes();
+    const hours = date.getHours();
+    const seconds = date.getSeconds();
+    clockTitle.innerText = `${hours}:${minutes}:${seconds}`;
+}
+
+function init() {
+    getTiME();
+}
+init();
+```
+
+### Marking a JS Clock part Two
+
+* setInterval() - 인자를 function, 시간 을 받아서 시간마다 function 실행함.
+* 삼항연산자(작은if문) 
+```javascript
+${seconds < 10 ? `0${seconds}` : seconds}`
+// seconds 가 10 보다 작다면 0${seconds} 실행 :(else) seconds 실행. 0~9초 일경우 01, 02 , 03... 
+```
+
+
