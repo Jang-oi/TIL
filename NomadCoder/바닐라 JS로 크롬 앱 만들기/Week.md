@@ -262,7 +262,11 @@ init();
 ### Marking a JS Clock part Two
 
 * setInterval() - 인자를 function, 시간 을 받아서 시간마다 function 실행함.
-* 삼항연산자(작은if문) 
+```javascript
+setInterval(getTime, 1000);
+// 1초마다 getTime 함수 실행
+```
+* 삼항연산자(작은if문)
 ```javascript
 ${seconds < 10 ? `0${seconds}` : seconds}`
 // seconds 가 10 보다 작다면 0${seconds} 실행 :(else) seconds 실행. 0~9초 일경우 01, 02 , 03... 
@@ -281,4 +285,14 @@ ${seconds < 10 ? `0${seconds}` : seconds}`
 * User Name 을 입력받아 local storage 에 저장하고 local storage 값을 뿌려주는 앱을 만듬.
 * classList, css 를 이용해서 값이 없다면 form 에 showing 이라는 class 를 추가하여 css 로 form 이 보이게 만들고
 값이 있다면 form 의 showing 을 삭제하면서 form 이 아닌 H4 태그에 showing 을 추가하여 form 이 아닌 H4가 보이게 만듬
-  
+```javascript
+const form = document.querySelector(".js-form"),
+    input = form.querySelector("input"),
+    greetings = document.querySelector(".js-greetings");
+// 이름은 직관적으로 선언.
+const USER_LS = "currentUser",
+    SHOWING_CN = "showing";
+// class나 key 값을 추가 할 때는 하드코딩이 아닌 선언을 통해서.
+```  
+
+
