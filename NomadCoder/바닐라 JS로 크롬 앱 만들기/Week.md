@@ -268,4 +268,17 @@ ${seconds < 10 ? `0${seconds}` : seconds}`
 // seconds 가 10 보다 작다면 0${seconds} 실행 :(else) seconds 실행. 0~9초 일경우 01, 02 , 03... 
 ```
 
+---
 
+# 6일차
+
+---
+
+### Saving the User Name
+
+* document.querySelector() - 원하는 셀렉터를 클래스, 아이디, 태그 다가져옴
+* local storage - key, value(문자열) 로 이뤄진 웹의 저장소 
+* User Name 을 입력받아 local storage 에 저장하고 local storage 값을 뿌려주는 앱을 만듬.
+* classList, css 를 이용해서 값이 없다면 form 에 showing 이라는 class 를 추가하여 css 로 form 이 보이게 만들고
+값이 있다면 form 의 showing 을 삭제하면서 form 이 아닌 H4 태그에 showing 을 추가하여 form 이 아닌 H4가 보이게 만듬
+  
