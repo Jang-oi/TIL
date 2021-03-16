@@ -9,3 +9,12 @@
 * event.target.parentNode
 * removeChild
 
+---
+
+# 9일차
+
+### 과제 제출
+
+---
+
+# 10일차
