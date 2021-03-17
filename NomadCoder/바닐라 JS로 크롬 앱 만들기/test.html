@@ -2,25 +2,24 @@
 <html>
 <head>
     <title>Parcel Sandbox</title>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
 </head>
 
 <body>
-<form class="js-taskForm">
-    <input tpye="text" placeholder="Add task">
 
-</form>
+<h1>Random Number Game</h1>
+<h2>Generate a number between 0 and <span id="slider_value_view"></span></h2>
+<input style="width: 300px;" class="slider_range" type="range" value="10" min="10" max="200">
+<div>
+    Guess the number: <input id="input_text" type="number"/>
+    <button>Play!</button>
+</div>
+<div id="divShow" style="display: none">
+    You chose: <span id="input_value"></span>, the machine chose: <span id="machine_value"></span>
+    <p id="won_lost"></p>
+</div>
 
-<h1>Pending</h1>
-<ul class="js-pendingList">
 
-
-</ul>
-<h1>Finished</h1>
-<ul class="js-finishList">
-
-
-</ul>
 <script src="test.js"></script>
 </body>
 </html>
