@@ -4,21 +4,14 @@ const clockContainer = document.querySelector(".js-clock"),
 function getTime() {
     // Don't delete this.
 
-    const xmasDay = new Date("2021-12-24:00:00:00+0900");
-    const testday = new Date("2021-03-13:00:00:00+0900");
     const date = new Date();
-    const month = xmasDay.getMonth() - date.getMonth();
-    const day = xmasDay.getDate() - date.getDate();
-    const hours = 23 - date.getHours();
-    const minutes = 59 - date.getMinutes();
-    const seconds = 59 - date.getSeconds();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
 
-    console.log(testday.getMinutes());
-    clockTitle.innerText = `${month < 10 ? `0${month}` : month}Month ${
-        day < 10 ? `0${day}` : day
-    }Day ${hours < 10 ? `0${hours}` : hours}Hours ${
+    clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${
         minutes < 10 ? `0${minutes}` : minutes
-    }Minutes ${seconds < 10 ? `0${seconds}` : seconds}Seconds`;
+    }:${seconds < 10 ? `0${seconds}` : seconds}`;
 }
 
 function init() {

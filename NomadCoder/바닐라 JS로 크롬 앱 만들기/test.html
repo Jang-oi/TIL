@@ -2,24 +2,42 @@
 <html>
 <head>
     <title>Parcel Sandbox</title>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="test.css"/>
 </head>
-
-<body>
-
-<h1>Random Number Game</h1>
-<h2>Generate a number between 0 and <span id="slider_value_view"></span></h2>
-<input style="width: 300px;" class="slider_range" type="range" value="10" min="10" max="200">
 <div>
-    Guess the number: <input id="input_text" type="number"/>
-    <button>Play!</button>
+    <table>
+        <tr>
+            <td colspan="3" id="result_value"></td>
+            <td><button class="ac">C</button></td>
+        </tr>
+        <tr>
+            <td><button>7</button></td>
+            <td><button>8</button></td>
+            <td><button>9</button></td>
+            <td><button>+</button></td>
+        </tr>
+        <tr>
+            <td><button>4</button></td>
+            <td><button>5</button></td>
+            <td><button>6</button></td>
+            <td><button>-</button></td>
+        </tr>
+        <tr>
+            <td><button>1</button></td>
+            <td><button>2</button></td>
+            <td><button>3</button></td>
+            <td><button>*</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button>0</button></td>
+            <td><button>=</button></td>
+            <td><button>/</button></td>
+        </tr>
+        
+    </table>
 </div>
-<div id="divShow" style="display: none">
-    You chose: <span id="input_value"></span>, the machine chose: <span id="machine_value"></span>
-    <p id="won_lost"></p>
-</div>
-
-
+<body>
 <script src="test.js"></script>
 </body>
 </html>

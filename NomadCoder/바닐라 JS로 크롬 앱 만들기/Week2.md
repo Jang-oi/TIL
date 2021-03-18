@@ -25,3 +25,23 @@
 
 # 11일차
 
+### Image Background
+
+* Math.random() * 5 를 하면 0~5까지의 난수가 나옴.
+* Math.floor() 을 쓰면 소수점이 버려짐 Math.floor(Math.random() * 5) 를하면 정수로 나옴
+* prepend
+* @keyframes
+
+### Getting the Weather
+
+* navigator navigator.geolocation
+```javascript
+    const coordsObj = {
+        latitude,
+        longitude
+    }
+    // Javascript 에선 오브젝트를 만들 때 key, value 가 이름이 같을 경우 위와 같이 가능
+```
+
+* fetch
+* then

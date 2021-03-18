@@ -1,36 +1,18 @@
-const range = document.querySelector(".slider_range");
-let sliderView = document.querySelector("#slider_value_view");
-const playBtn = document.querySelector("button");
-const inputValue = document.querySelector("#input_value");
-const inputText = document.querySelector("#input_text");
-const machineValue = document.querySelector("#machine_value");
-const wonlost = document.querySelector("#won_lost");
-const divShow = document.querySelector("#divShow");
+// 버튼마다 밸류값을 가져와서 그 값에 대해 해결함 btn() 하나로 해결
+const btn = document.getElementsByTagName("button");
+const result_value = document.querySelector("#result_value");
+let value = 0;
 
-function playBtnFn() {
-    playBtn.addEventListener("click", function() {
-        inputValue.innerHTML = inputText.value;
-        machineValue.innerHTML = Math.floor(Math.random() * range.value+1);
-
-        divShow.setAttribute("style", "display: block");
-        if(machineValue.textContent === inputValue.textContent) {
-            wonlost.innerHTML = 'You Won!'
-        } else {
-            wonlost.innerHTML = 'You Lost!'
-        }
-    })
-}
-
-function rangeSlider() {
-    range.addEventListener('input', function() {
-        sliderView.innerHTML = range.value;
-    })
+function btnFn() {
+    for (let i = 0; i < btn.length; i++) {
+        btn[i].addEventListener("click", function () {
+            console.log(btn[i].textContent);
+        })
+    }
 }
 
 function init() {
-    sliderView.innerHTML = range.value;
-    rangeSlider();
-    playBtnFn();
+    btnFn();
 }
 
 init();
