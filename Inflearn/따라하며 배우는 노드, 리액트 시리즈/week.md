@@ -28,3 +28,23 @@ package.json(파일명)
 ### package.json
 
 * 설치한 패키지들을 관리하는 파일 node로 프로젝트를 시작한다면 가장 먼저 만들어야할 파일 (npm init 명령어를 통해 생성)
+
+--- 
+
+# 2일차
+
+---
+
+### 몽고DB
+
+### mongoose
+
+* 몽고DB를 편하게 사용할수 있는 툴
+* npm install mongoose --save
+* 아래와 같이 express 가 추가 됨
+```javascript
+package.json(파일명)
+"dependencies": {
+    "mongoose": "^5.12.2"
+}
+```
