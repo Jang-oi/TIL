@@ -74,6 +74,8 @@ package.json(파일명)
 * 분산 버전 관리 시스템
 * 여러명이 한 사이트를 위해 코드를 작업 한다면 여러명이 GIT 을 통해 합칠 수 있고 관리를 할 수 있다.
 
-### 순서 ?
+### 순서
 
 * Working Directory 에서 add 하면 Staging Area 에 넣어줌.
+* Staging Aera 에 있는 파일들을 commit 해서 git repository(저장소)에 올림
+* push 해서 git hub 에서 봄.
