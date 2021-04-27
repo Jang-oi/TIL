@@ -79,3 +79,16 @@ package.json(파일명)
 * Working Directory 에서 add 하면 Staging Area 에 넣어줌.
 * Staging Aera 에 있는 파일들을 commit 해서 git repository(저장소)에 올림
 * push 해서 git hub 에서 봄.
+
+--- 
+
+# 5일차
+
+---
+
+### WEB 동작 
+
+* Client - Server
+* 클라이언트에서 보내는 값(ID, EMAIL, PW)을 서버로 전송함.  
+* Body-parser Dependency (npm install body-parser --save)를 통해 req.body로 출력
+* Body-parser 를 통해서 
