@@ -91,4 +91,15 @@ package.json(파일명)
 * Client - Server
 * 클라이언트에서 보내는 값(ID, EMAIL, PW)을 서버로 전송함.  
 * Body-parser Dependency (npm install body-parser --save)를 통해 req.body로 출력
-* Body-parser 를 통해서 
+
+--- 
+
+# 5일차
+
+---
+
+### NODE MON
+
+* 소스를 변경할 때 그걸 감지해서 자동으로 서버를 재 시작 해주는 Tool
+* npm install nodemon --save-dev
+* 시작할 때 nodemon 으로 설정 package.json 에 작성.
