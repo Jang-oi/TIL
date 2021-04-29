@@ -103,3 +103,14 @@ package.json(파일명)
 * 소스를 변경할 때 그걸 감지해서 자동으로 서버를 재 시작 해주는 Tool
 * npm install nodemon --save-dev
 * 시작할 때 nodemon 으로 설정 package.json 에 작성.
+
+--- 
+
+# 6일차
+
+---
+
+### Bcrypt
+
+* npm install bcrypt --save
+* saltRounds - salt 가 몇글자인지. salt 를 이용해서 암호화.
