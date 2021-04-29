@@ -21,7 +21,7 @@
 ---
 ## [Algorithm][Algorithm]
 
-* [programmers Level1](https://github.com/Jang-oi/TIL/tree/main/Algorithm/solve)
+* [Programmers Level1](https://github.com/Jang-oi/TIL/tree/main/Algorithm/solve)
 ---
 ## [NomadCoder][NomadCoder]
 
