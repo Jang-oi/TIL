@@ -47,7 +47,7 @@ function solution(s) {
     } else {
         answer = s.substring(test/2, test/2 + 1);
     }
-    return answer
+    return answer 
 }
 ```
 
