@@ -34,3 +34,22 @@ function solution(participant, completion) {
 ```
 * arr.length 같은 경우 매번 루프 때 마다 사용하니 변수로 선언 하는게 효율적임.
 * forEach 같은 경우 안에서 return 하면 undefined 값 나옴.
+
+### 가운데 글자 가져오기
+
+```javascript
+function solution(s) {
+
+    let answer = '';
+    const test = s.length;
+    if (test % 2 == 0) {
+        answer = s.substring(test/2 - 1, test/2 + 1);
+    } else {
+        answer = s.substring(test/2, test/2 + 1);
+    }
+    return answer
+}
+```
+
+* 술 취한 상태에서 생각없이 품.
+* substring 잘 쓰자.
