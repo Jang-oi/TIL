@@ -71,3 +71,18 @@ function solution(seoul) {
 ```
 
 * indexOf 를 활용 해보자. ex) return '김서방은 ' + seoul.indexOf('Kim') + '에 있다'; 로 끝남.
+
+### 핸드폰 번호 가리기
+
+* https://programmers.co.kr/learn/courses/30/lessons/12948?language=javascript
+
+```javascript
+function solution(phone_number) {
+    var answer = phone_number.substring(0, phone_number.length-4);
+    var answer2 = phone_number.substr(phone_number.length-4,4);
+
+    return answer.replace(/[0-9]/gi, '*').concat(answer2);
+}
+```
+
+* 정규식 공부하자 ... 
