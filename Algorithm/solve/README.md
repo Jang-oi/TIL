@@ -37,6 +37,7 @@ function solution(participant, completion) {
 
 ### 가운데 글자 가져오기
 
+* https://programmers.co.kr/learn/courses/30/lessons/12903?language=javascript
 ```javascript
 function solution(s) {
 
@@ -53,3 +54,20 @@ function solution(s) {
 
 * 술 취한 상태에서 생각없이 품.
 * substring 잘 쓰자.
+
+### 서울에서 김서방 찾기
+
+* https://programmers.co.kr/learn/courses/30/lessons/12919?language=javascript
+```javascript
+function solution(seoul) {
+    let answer = '';
+    seoul.forEach(function(data, index) {
+        if(data === 'Kim') {
+            answer =  '김서방은 ' + index + '에 있다'
+        }
+    })
+    return answer;
+}
+```
+
+* indexOf 를 활용 해보자. ex) return '김서방은 ' + seoul.indexOf('Kim') + '에 있다'; 로 끝남.
