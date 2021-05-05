@@ -86,3 +86,28 @@ function solution(phone_number) {
 ```
 
 * 정규식 공부하자 ... 
+
+### 두 개 뽑아서 더하기
+
+* https://programmers.co.kr/learn/courses/30/lessons/68644?language=javascript
+
+```javascript
+function solution(numbers) {
+    const len = numbers.length;
+    let arr = [];
+    for (let i = 0; i < len; i++) {
+        for (let j = i+1; j < len; j++) {
+            arr.push(numbers[i] + numbers[j]);
+        }
+    }
+    const set = new Set(arr)
+    const answer = [...set]
+    answer.sort(function (a, b) {
+        return a - b;
+    })
+    return answer;
+}
+```
+
+* Set - 중복을 제거한 값들의 집합
+* Spread 연산자 공부하자 ex) [...set] 을 사용해서 set 객체를 answer 라는 배열에 담음. 
