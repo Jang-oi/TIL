@@ -111,3 +111,17 @@ function solution(numbers) {
 
 * Set - 중복을 제거한 값들의 집합
 * Spread 연산자 공부하자 ex) [...set] 을 사용해서 set 객체를 answer 라는 배열에 담음. 
+
+### 2016년 
+
+* https://programmers.co.kr/learn/courses/30/lessons/12901?language=javascript
+
+```javascript
+function solution(a, b) {
+    const arr = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+    const date = new Date('2016', a-1, b).getDay()
+    return arr[date];
+}
+```
+
+* Date 짱
