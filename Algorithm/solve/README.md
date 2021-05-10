@@ -125,3 +125,49 @@ function solution(a, b) {
 ```
 
 * Date 짱
+
+### 나누어 떨어지는 숫자 배열
+
+* https://programmers.co.kr/learn/courses/30/lessons/12910?language=javascript
+
+```javascript
+function solution(arr, divisor) {
+    var answer = [];
+    arr.forEach(function(item){
+        if(item % divisor === 0) {
+            answer.push(item)
+        }
+    })
+    if(answer.length === 0) {
+        answer.push(-1)
+    }
+    return answer.sort(function (a, b) {
+        return a-b;
+    });
+}
+```
+
+* ES6 를 배워서 활용해봐야하나 ...
+* filter, =>, 삼항 연산자 등 활용도를 높일 것.
+
+### 문자열 내 p와 y의 개수
+
+* https://programmers.co.kr/learn/courses/30/lessons/12916?language=javascript
+
+```javascript
+function solution(s){
+    let test = 0;
+    let test2 = 0;
+    for(let i = 0; i < s.length; i++) {
+        const a = s.charCodeAt(i);
+        if (a == 112 || a == 80) {
+            test++;
+        } else if (a == 121 || a == 89) {
+            test2++;
+        }
+    }
+    return test == test2 ? true : false;
+}
+```
+
+* match, split 을 생각했으면 ...
