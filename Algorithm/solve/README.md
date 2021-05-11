@@ -171,3 +171,20 @@ function solution(s){
 ```
 
 * match, split 을 생각했으면 ...
+
+### 같은 숫자는 싫어
+
+* https://programmers.co.kr/learn/courses/30/lessons/12906?language=javascript
+
+```javascript
+function solution(arr)
+{
+    let answer = arr.filter((data, index) => {
+        return data != arr[index+1]
+    })
+    return answer
+}
+
+```
+
+* filter 를 더 공부하자.
