@@ -188,3 +188,23 @@ function solution(arr)
 ```
 
 * filter 를 더 공부하자.
+
+### 신규 아이디 추천
+
+* https://programmers.co.kr/learn/courses/30/lessons/72410?language=javascript
+
+```javascript
+function solution(new_id) {
+    const answer =
+        new_id.toLowerCase()
+            .replace(/[~!@#$%^&*()=+\[{\]}:?,<>\/]/g, '')
+            .replace(/\.+/g, '.')
+            .replace(/^\.|\.$/g, '')
+            .replace(/^$/, 'a')
+            .substring(0,15)
+            .replace(/\.$/,'')
+    return answer.padEnd(3, answer.charAt(answer.length-1))
+}
+```
+
+* 정규식, padEnd, padStart 굿
