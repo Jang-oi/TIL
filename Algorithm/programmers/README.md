@@ -209,6 +209,27 @@ function solution(new_id) {
 
 * 정규식, padEnd, padStart 굿
 
+### 제일 작은 수 제거하기
+
+* https://programmers.co.kr/learn/courses/30/lessons/12935?language=javascript
+
+```javascript
+function solution(arr) {
+    let min = arr[0];
+    arr.forEach((val, index) => {
+        if(arr[index] < min) {
+            min = arr[index];
+        }
+    })
+    let answer = arr.filter((data) => {
+        return data != min;
+    })
+    return arr.length == 1 ? [-1] : answer;
+}
+```
+
+* Math.min.apply() 사용 하면 끝..
+
 ### 124 나라의 숫자
 
 * https://programmers.co.kr/learn/courses/30/lessons/12899?language=javascript
