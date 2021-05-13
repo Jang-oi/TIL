@@ -208,3 +208,11 @@ function solution(new_id) {
 ```
 
 * 정규식, padEnd, padStart 굿
+
+### 124 나라의 숫자
+
+* https://programmers.co.kr/learn/courses/30/lessons/12899?language=javascript
+
+```javascript
+
+```
