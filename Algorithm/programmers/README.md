@@ -230,6 +230,29 @@ function solution(arr) {
 
 * Math.min.apply() 사용 하면 끝..
 
+### 문자열 내 마음대로 정렬하기
+
+* https://programmers.co.kr/learn/courses/30/lessons/12915?language=javascript
+
+```javascript
+function solution(strings, n) {
+
+    strings.forEach((val, index) => {
+        strings[index] = strings[index][n] + strings[index];
+    })
+    strings.sort();
+
+    strings.forEach((val, index) => {
+        strings[index] = val.slice(1)
+    })
+
+    return strings;
+}
+```
+
+* sort 를 직접 옵션? 을 준다면 .. 더 효율적인 방법이 나올듯
+
+
 ### 124 나라의 숫자
 
 * https://programmers.co.kr/learn/courses/30/lessons/12899?language=javascript
