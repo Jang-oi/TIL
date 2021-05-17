@@ -252,6 +252,39 @@ function solution(strings, n) {
 
 * sort 를 직접 옵션? 을 준다면 .. 더 효율적인 방법이 나올듯
 
+### 모의고사
+
+* https://programmers.co.kr/learn/courses/30/lessons/42840?language=javascript
+
+```javascript
+function solution(answers) {
+    const answer = [];
+    const arr = [1, 2, 3, 4, 5];
+    const arr2 = [2, 1, 2, 3, 2, 4, 2, 5]
+    const arr3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
+    let val = [0, 0, 0];
+    answers.forEach((value, index) => {
+        if (arr[index % 5] == answers[index]) {
+            val[0]++;
+        }
+        if (arr2[index % 8] == answers[index]) {
+            val[1]++;
+        }
+        if (arr3[index % 10] == answers[index]) {
+            val[2]++;
+        }
+    })
+    const max = Math.max.apply(null, val);
+    val.forEach((value, index) => {
+        if (max === value) {
+            answer.push(index + 1)
+        }
+    })
+    return answer;
+}
+```
+
+* 담엔 간지나게 filter 로... 
 
 ### 124 나라의 숫자
 
