@@ -286,6 +286,40 @@ function solution(answers) {
 
 * 담엔 간지나게 filter 로... 
 
+### 시저 암호
+
+* https://programmers.co.kr/learn/courses/30/lessons/12926?language=javascript
+
+```javascript
+function solution(s, n) {
+    let answer = '';
+    let length = s.length;
+    for (let i = 0; i < length; i++) {
+        if (s.charCodeAt(i) == 32) {
+            answer += ' ';
+            continue;
+        }
+        if (s.charCodeAt(i) < 91) {
+            if (s.charCodeAt(i) + n > 90) {
+                answer += String.fromCharCode(s.charCodeAt(i) + n - 26);
+            } else {
+                answer += String.fromCharCode(s.charCodeAt(i) + n);
+            }
+        } else if (s.charCodeAt(i) > 96) {
+            if (s.charCodeAt(i) + n > 122) {
+                answer += String.fromCharCode(s.charCodeAt(i) + n - 26);
+            } else {
+                answer += String.fromCharCode(s.charCodeAt(i) + n);
+            }
+        }
+    }
+    return answer;
+}
+```
+
+* 졸려서 대충 품 효율성 제로일듯
+
+
 ### 124 나라의 숫자
 
 * https://programmers.co.kr/learn/courses/30/lessons/12899?language=javascript
