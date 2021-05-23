@@ -319,6 +319,17 @@ function solution(s, n) {
 
 * 졸려서 대충 품 효율성 제로일듯
 
+### 문자열을 정수로 바꾸기
+
+* https://programmers.co.kr/learn/courses/30/lessons/12925?language=javascript
+
+```javascript
+function solution(s) {
+    return parseInt(s)
+}
+```
+
+* 풀면됐찌
 
 ### 124 나라의 숫자
 
