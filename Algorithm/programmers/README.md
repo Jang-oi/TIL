@@ -331,6 +331,26 @@ function solution(s) {
 
 * 풀면됐찌
 
+### 이상한 문자 만들기 
+
+* https://programmers.co.kr/learn/courses/30/lessons/12930?language=javascript
+
+```javascript
+function solution(s) {
+    const wordArr = s.split(" ");
+    let word = "";
+    for (let i = 0; i < wordArr.length; i++) {
+        for (let j = 0; j < wordArr[i].length; j++) {
+            j % 2 == 0 ? word += wordArr[i][j].toUpperCase() : word += wordArr[i][j].toLowerCase()
+        }
+        if (i != wordArr.length-1) word += " ";
+    }
+    return word;
+}
+```
+
+* 생각나는대로 풀어봄.
+
 ### 124 나라의 숫자
 
 * https://programmers.co.kr/learn/courses/30/lessons/12899?language=javascript
