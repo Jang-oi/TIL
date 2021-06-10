@@ -358,3 +358,25 @@ function solution(s) {
 ```javascript
 
 ```
+
+### 정수 제곱근 판별
+
+* https://programmers.co.kr/learn/courses/30/lessons/12934?language=javascript
+
+```javascript
+function solution(n) {
+    let answer = n / 2;
+
+    for (let i = 1; i < n / 2; i++) {
+        answer -= i;
+        if (answer < 0) {
+            return (answer + i) * 2 === i ? (i + 1) * (i + 1) : -1;
+        }
+    }
+    return -1;
+}
+```
+
+* 나눗셈과 뺄셈만으로 제곱근을 구할 수 있는 홍길주의 숙수념에 나오는 방식
+
+
