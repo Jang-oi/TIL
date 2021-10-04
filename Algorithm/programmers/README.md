@@ -379,4 +379,20 @@ function solution(n) {
 
 * 나눗셈과 뺄셈만으로 제곱근을 구할 수 있는 홍길주의 숙수념에 나오는 방식
 
+### 위클리챌린지 1주차_부족한 금액 계산하기
+
+* https://programmers.co.kr/learn/courses/30/lessons/82612?language=javascript
+
+```javascript
+function solution(price, money, count) {
+    let answer = 0;
+    for (let i = 1; i <= count; i++) {
+        answer += price * i;
+    }
+    return answer > money ? answer - money : 0;
+}
+```
+
+* 간단한 문제 ...
+
 
