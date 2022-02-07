@@ -1,3 +1,0 @@
-# NomadCorder
-
-## https://nomadcoders.co/
