@@ -395,4 +395,78 @@ function solution(price, money, count) {
 
 * 간단한 문제 ...
 
+### 두 정수 사이의 합
+
+* https://programmers.co.kr/learn/courses/30/lessons/12912?language=javascript
+
+```javascript
+function solution(a, b) {
+    let result = 0;
+
+    const min = Math.min(a, b);
+    const max = Math.max(a, b)
+    for (let i = min; i <= max; i++) result += i;
+
+    return result;
+}
+```
+
+* 복잡하게 생각안하고 간단하게 품...
+
+### x만큼 간격이 있는 n개의 숫자
+
+* https://programmers.co.kr/learn/courses/30/lessons/12954?language=javascript
+
+```javascript
+function solution(x, n, s =[]) {
+    for (let i = 1; i <= n; i++) s.push(x * i);
+    return s;
+}
+```
+
+* 간단하게 ... 품 
+
+### 행렬의 덧셈
+
+* https://programmers.co.kr/learn/courses/30/lessons/12950?language=javascript
+
+```javascript
+function solution(arr1, arr2, r = []) {
+    for (let i = 0; i < arr1.length; i++) {
+        r.push([]);
+        for (let j = 0; j < arr1[i].length; j++) {
+            r[i].push(arr1[i][j] + arr2[i][j]);
+        }
+    }
+    return r;
+}
+```
+
+### 하샤드 수
+
+* https://programmers.co.kr/learn/courses/30/lessons/12947?language=javascript
+
+```javascript
+function solution(x) {
+
+    const xx = x.toString();
+    let sum = 0;
+    for (let i = 0; i < xx.length; i++) sum += Number(xx[i]);
+
+    return x%sum === 0;
+}
+```
+
+### 평균 구하기
+
+* https://programmers.co.kr/learn/courses/30/lessons/12944?language=javascript
+
+```javascript
+function solution(arr) {
+    return arr.reduce((prev, curr) => prev + curr)/arr.length;
+}
+```
+
+* reduce 사용! 간지나게 한줄로... 
+
 
