@@ -11,7 +11,7 @@
 ---
 ## [Algorithm][Algorithm]
 
-* [Programmers Level1](https://github.com/Jang-oi/TIL/tree/main/Algorithm/programmers)
+* [Programmers Level1](https://github.com/Jang-oi/TIL/blob/main/Algorithm/programmers/ProgrammersLevel1.md)
 ---
 
 [JavaScript]: /JavaScript
