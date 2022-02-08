@@ -469,4 +469,20 @@ function solution(arr) {
 
 * reduce 사용! 간지나게 한줄로... 
 
+### 콜라츠 추측
 
+* https://programmers.co.kr/learn/courses/30/lessons/12943?language=javascript
+
+```javascript
+function solution(num, r = 0) {
+    while(num !== 1) {
+        r++;
+        if (r === 500) return -1
+        num = num%2 ? num * 3 + 1 : num / 2;
+    }
+    return r;
+}
+
+```
+
+* 삼항연산자 굿
