@@ -492,5 +492,44 @@ function solution(num, r = 0) {
 * https://programmers.co.kr/learn/courses/30/lessons/67256?language=javascript
 
 ```javascript
-
+function solution(numbers, hand, answer = '', l = '*', r = "#") {
+    const getDistance = {
+        2 : [3,1,0,1,2,1,2,3,2,3,4],
+        5 : [2,2,1,2,1,0,1,2,1,2,3],
+        8 : [1,3,2,3,2,1,2,1,0,1,2],
+        0 : [0,4,3,4,3,2,3,2,1,2,1]
+    }
+    const leftNum = [1,4,7];
+    const rightNum = [3,6,9];
+    for (let i = 0; i < numbers.length; i++) {
+        if (leftNum.includes(numbers[i])) {
+            answer += 'L'
+            l = numbers[i];
+        } else if (rightNum.includes(numbers[i])) {
+            answer += 'R'
+            r = numbers[i];
+        } else {
+            l = l === '*' ? 10 : l;
+            r = r === '#' ? 10 : r;
+            const distanceL = getDistance[numbers[i]][l]
+            const distanceR = getDistance[numbers[i]][r]
+            if (distanceL === distanceR) {
+                if (hand === 'right') {
+                    answer += 'R'
+                    r = numbers[i];
+                } else {
+                    answer += 'L'
+                    l = numbers[i];
+                }
+            } else if (distanceL > distanceR) {
+                answer += 'R'
+                r = numbers[i];
+            } else {
+                answer += 'L'
+                l = numbers[i];
+            }
+        }
+    }
+    return answer;
+}
 ```
