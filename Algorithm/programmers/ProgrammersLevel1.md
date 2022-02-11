@@ -539,6 +539,6 @@ function solution(numbers, hand, answer = '', l = '*', r = "#") {
 * https://programmers.co.kr/learn/courses/30/lessons/92334?language=javascript
 
 ```javascript
- 
+
 
 ```
