@@ -493,6 +493,7 @@ function solution(num, r = 0) {
 
 ```javascript
 function solution(numbers, hand, answer = '', l = '*', r = "#") {
+    // TODO 좌표값으로 한번 해보자.
     const getDistance = {
         2 : [3,1,0,1,2,1,2,3,2,3,4],
         5 : [2,2,1,2,1,0,1,2,1,2,3],
