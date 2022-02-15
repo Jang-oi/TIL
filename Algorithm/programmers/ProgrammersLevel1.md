@@ -540,6 +540,50 @@ function solution(numbers, hand, answer = '', l = '*', r = "#") {
 * https://programmers.co.kr/learn/courses/30/lessons/92334?language=javascript
 
 ```javascript
+function solution(id_list, report, k) {
 
+    const reportCount = {};
+    // {[신고자 : [신고받은사람1, 신고받은사람2]], [신고자 : [신고받은사람1, 신고받은사람2]]}
+    //[신고자1, 신고자2] > k ?
+    //[2,2,1,0]
+    // 위와 같은 구조로 만들어서 {} 인덱스는 id_list 고 신고받은사람 1,2,3 을 넣어서 리턴해주면 될듯..
+    const answer = {};
+    const reportObject = {};
+    const keyArr = [];
+    id_list.map(val => {
+        reportObject[val] = [];
+        answer[val] = 0;
+    })
 
+    const reportSet = new Set(report);
+    const reportArr = [...reportSet];
+
+    reportArr.map(val => {
+        // reportUser 신고 한 사람
+        // reportName 신고 받은 사람
+        const [reportUser, reportName] = val.split(' ');
+        reportCount[reportName] = (reportCount[reportName]) ? reportCount[reportName] + 1 : 1;
+        reportObject[reportUser].push(reportName);
+    })
+
+    // reportCount 돌면서 k 이상 신고 당한놈 꺼내.
+    for (const key in reportCount) {
+        if (reportCount[key] >= k) {
+            // k 이상 신고를 어떤 놈이 했는 지 꺼내
+            keyArr.push(key);
+        }
+    }
+
+    for (const reportKey in reportObject) {
+        for(let i = 0; i < keyArr.length; i++) {
+            if (reportObject[reportKey].includes(keyArr[i])) {
+                answer[reportKey]++;
+            }
+        }
+    }
+    return Object.values(answer)
+}
 ```
+
+* 중복 제거는 Set 을 이용하자 ... indexOf, filter 로 뻘짓함.
+* Object 는 for ... in 으로! 
