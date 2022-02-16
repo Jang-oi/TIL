@@ -587,3 +587,11 @@ function solution(id_list, report, k) {
 
 * 중복 제거는 Set 을 이용하자 ... indexOf, filter 로 뻘짓함.
 * Object 는 for ... in 으로! 
+
+### [1차] 다트게임
+
+* https://programmers.co.kr/learn/courses/30/lessons/17682?language=javascript
+
+```javascript
+
+```
