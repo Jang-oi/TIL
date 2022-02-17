@@ -593,5 +593,42 @@ function solution(id_list, report, k) {
 * https://programmers.co.kr/learn/courses/30/lessons/17682?language=javascript
 
 ```javascript
+function solution(dartResult) {
+    var answer = 0;
+    const dartArray = dartResult.match(/[0-9]+[A-Z][/*#]?/g);
+    let bNum = 0;
+    for (let i = 0; i < dartArray.length; i++) {
+        if (i > 0) bNum = dartArray[i - 1].match(/[0-9]+/g)[0];
+        let num = dartArray[i].match(/[0-9]+/g)[0];
+        const bonus = dartArray[i].match(/[A-Z]/g)[0];
+        const option = dartArray[i].match(/[/*#]/g) && dartArray[i].match(/[/*#]/g)[0];
 
+        switch (bonus) {
+            case 'S' :
+                num = Math.pow(num, 1);
+                break;
+            case 'D' :
+                num = Math.pow(num, 2);
+                break;
+            case 'T' :
+                num = Math.pow(num, 3);
+                break;
+            default :
+                break;
+        }
+/*        // (1*2) + (4*2) + 3*3*3
+        console.log(num, bNum, option)
+        if (option === '*') {
+            num = (num * 2) + (bNum * 2)-bNum;
+            console.log(num)
+        }
+        answer += num;*/
+
+        // 첫번째 1
+        // 두번째 4 *
+        ///
+    }
+
+    return answer;
+}
 ```
