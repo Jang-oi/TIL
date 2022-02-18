@@ -594,15 +594,14 @@ function solution(id_list, report, k) {
 
 ```javascript
 function solution(dartResult) {
-    var answer = 0;
+    // 다트 한 판씩 배열로 나눔 (ex - [1S, 2D*, 3D#]) 
+    // 나눈 배열을 반복하면서 각자 옵션에 대해서 계산함.
     const dartArray = dartResult.match(/[0-9]+[A-Z][/*#]?/g);
-    let bNum = 0;
+    const resultArray = [];
     for (let i = 0; i < dartArray.length; i++) {
-        if (i > 0) bNum = dartArray[i - 1].match(/[0-9]+/g)[0];
         let num = dartArray[i].match(/[0-9]+/g)[0];
         const bonus = dartArray[i].match(/[A-Z]/g)[0];
         const option = dartArray[i].match(/[/*#]/g) && dartArray[i].match(/[/*#]/g)[0];
-
         switch (bonus) {
             case 'S' :
                 num = Math.pow(num, 1);
@@ -616,19 +615,46 @@ function solution(dartResult) {
             default :
                 break;
         }
-/*        // (1*2) + (4*2) + 3*3*3
-        console.log(num, bNum, option)
         if (option === '*') {
-            num = (num * 2) + (bNum * 2)-bNum;
-            console.log(num)
+            if (i === 0) num = num * 2;
+            else {
+                num = num * 2;
+                resultArray[i - 1] = resultArray[i - 1] * 2;
+            }
         }
-        answer += num;*/
+        if (option === '#') num = num * -1;
+        resultArray.push(num);
+    }
+    return resultArray.reduce((acc, cur) => acc += cur, 0);
+}
+```
 
-        // 첫번째 1
-        // 두번째 4 *
-        ///
+* bonus, option 부분이 좀 아쉬웠다 .. 담엔 더 잘해보자
+
+### 숫자 문자열과 영단어
+
+* https://programmers.co.kr/learn/courses/30/lessons/81301?language=javascript
+
+```javascript
+function solution(s) {
+    var numObj = {
+        zero : 0,
+        one : 1,
+        two : 2,
+        three : 3,
+        four : 4,
+        five : 5,
+        six : 6,
+        seven : 7,
+        eight : 8,
+        nine : 9
     }
 
-    return answer;
+    while (/\D/.test(s)) {
+        for (const key in numObj) {
+            s = s.replace(key, numObj[key])
+        }
+    }
+    return parseInt(s);
 }
 ```
