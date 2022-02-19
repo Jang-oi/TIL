@@ -658,3 +658,5 @@ function solution(s) {
     return parseInt(s);
 }
 ```
+
+* 문자로 들어올 경우 숫자로 변경하는 거로 끝 ...
