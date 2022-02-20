@@ -660,3 +660,11 @@ function solution(s) {
 ```
 
 * 문자로 들어올 경우 숫자로 변경하는 거로 끝 ...
+
+### 실패율
+
+* https://programmers.co.kr/learn/courses/30/lessons/42889?language=javascript
+
+```javascript
+
+```
