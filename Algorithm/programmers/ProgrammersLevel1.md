@@ -666,6 +666,16 @@ function solution(s) {
 * https://programmers.co.kr/learn/courses/30/lessons/42889?language=javascript
 
 ```javascript
+function solution(N, stages) {
+    const answer = []
+    const failArray = new Array(stages.length);
+    failArray.fill(0);
+    // 1, 2, 3, 4 숫자의 개수를 파악한 배열을 하나 생성
+    stages.map(val => failArray[val]++)
+    console.log(failArray)
+    let mom = stages.length;
 
-
+    console.log(answer)
+    return answer;
+}
 ```
