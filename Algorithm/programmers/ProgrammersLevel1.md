@@ -667,15 +667,17 @@ function solution(s) {
 
 ```javascript
 function solution(N, stages) {
-    const answer = []
+    const resultArray = {};
     const failArray = new Array(stages.length);
     failArray.fill(0);
-    // 1, 2, 3, 4 숫자의 개수를 파악한 배열을 하나 생성
     stages.map(val => failArray[val]++)
-    console.log(failArray)
     let mom = stages.length;
-
-    console.log(answer)
-    return answer;
+    for (let i = 0; i <= N; i++) {
+        resultArray[i] = failArray[i] / mom
+        mom -= failArray[i];
+    }
+    delete resultArray[0];
+    const sortable = Object.entries(resultArray).sort(([, a], [, b]) => b - a);
+    return sortable.map(([val]) => {return Number(val)});
 }
 ```
