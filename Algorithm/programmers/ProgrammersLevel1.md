@@ -667,17 +667,28 @@ function solution(s) {
 
 ```javascript
 function solution(N, stages) {
+
     const resultArray = {};
+
+    // 실패율 계산을 위해 각 스테이지에 몇명이 남아있는지에 대한 배열을 구함
     const failArray = new Array(stages.length);
     failArray.fill(0);
     stages.map(val => failArray[val]++)
+    console.log(failArray)
+    
+    // 각 스테이지의 실패율을 계산해서 {단계 : 실패율, 단계 : 실패율, 단계 : 실패율... }로 데이터 생성함.
+    // 0단계는 존재하지 않으니까 1 부터 시작함.
     let mom = stages.length;
-    for (let i = 0; i <= N; i++) {
+    for (let i = 1; i <= N; i++) {
         resultArray[i] = failArray[i] / mom
         mom -= failArray[i];
     }
-    delete resultArray[0];
+    console.log(resultArray);
+
+    // 실패율에 따라 정렬함
     const sortable = Object.entries(resultArray).sort(([, a], [, b]) => b - a);
+    console.log(sortable);
+
     return sortable.map(([val]) => {return Number(val)});
 }
 ```
@@ -687,15 +698,28 @@ function solution(N, stages) {
 
 ```javascript
 function solution(board, moves) {
-    var answer = 0;
+    // [
+    //      [0, 0, 0, 0, 0],
+    //      [0, 0, 1, 0, 3],
+    //      [0 ,2, 5, 0, 1],
+    //      [4 ,2, 4, 4, 2],
+    //      [3 ,5, 1, 3, 1]
+    //  ]
+
+    let answer = 0;
     const numArray = [];
     for (let i = 0; i < moves.length; i++) {
         for (let j = 0; j < board.length; j++) {
+            // 선택한 칸의 인형이 있는 위치 까지 찾는다.
+            // 찾은 뒤 인형이 쌓인 배열 numArray 의 인형과 지금 뽑힌 인형과 같으면
+            // numArray 마지막 인형 제거, 인형 두개가 제거 됐으니 2 더함
             if (board[j][moves[i]-1] !== 0) {
                 if (numArray[numArray.length-1] === board[j][moves[i]-1]) {
                     numArray.pop();
-                    answer +=2;
+                    answer += 2;
+                    // 쌓여있는 인형과 뽑힌 인형이 다를 경우 쌓인 인형 배열에 추가함
                 } else numArray.push(board[j][moves[i]-1]);
+                // 뽑힌 인형은 없어졌으니 그 자리에 0으로 변경하면서 반복문 나감
                 board[j][moves[i]-1] = 0;
                 break;
             }
