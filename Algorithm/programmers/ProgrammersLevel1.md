@@ -681,3 +681,4 @@ function solution(N, stages) {
     return sortable.map(([val]) => {return Number(val)});
 }
 ```
+
