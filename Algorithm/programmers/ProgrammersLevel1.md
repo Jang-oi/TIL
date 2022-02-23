@@ -681,4 +681,26 @@ function solution(N, stages) {
     return sortable.map(([val]) => {return Number(val)});
 }
 ```
+### 크레인 인형 뽑기
 
+* https://programmers.co.kr/learn/courses/30/lessons/64061?language=javascript
+
+```javascript
+function solution(board, moves) {
+    var answer = 0;
+    const numArray = [];
+    for (let i = 0; i < moves.length; i++) {
+        for (let j = 0; j < board.length; j++) {
+            if (board[j][moves[i]-1] !== 0) {
+                if (numArray[numArray.length-1] === board[j][moves[i]-1]) {
+                    numArray.pop();
+                    answer +=2;
+                } else numArray.push(board[j][moves[i]-1]);
+                board[j][moves[i]-1] = 0;
+                break;
+            }
+        }
+    }
+    return answer;
+}
+```
