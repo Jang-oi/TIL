@@ -728,3 +728,40 @@ function solution(board, moves) {
     return answer;
 }
 ```
+
+### [1차] 비밀지도
+
+* https://programmers.co.kr/learn/courses/30/lessons/17681?language=javascript
+
+```javascript
+function solution(n, arr1, arr2) {
+    const answer = [];
+    const answer2 = [];
+    // 10진수를 2진수로 변환
+    for (let i = 0; i < arr1.length; i++) answer.push(Number(arr1[i].toString(2))+ Number(arr2[i].toString(2)))
+
+    for (let i = 0; i < answer.length; i++) {
+        // n 자리수 만큼 앞에 0을 채워주는 함수 사용.
+        const stringData = insertNum(answer[i], n);
+        let string = '';
+        for (let j = 0; j < stringData.length; j++) {
+            // 자리수의 숫자가 0 보다 클 경우 # 추가
+            // 아닐 경우 ' ' 추가
+            if (stringData[j] > 0) string += '#'
+            else string += ' ';
+        }
+        answer2.push(string);
+    }
+    console.log(answer2)
+    return answer2;
+}
+
+const insertNum = (num, len) => {
+    let str = '';
+    while(len > num.toString().length) {
+        str += 0;
+        len--;
+    }
+    return str += num;
+}
+```
