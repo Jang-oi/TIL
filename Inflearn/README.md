@@ -4,5 +4,5 @@
 
 ## SECTION
 
-* [섹션 1. 함수형 프로그래밍 개요](https://github.com/Jang-oi/TIL/tree/main/Algorithm/programmers/Level2)
+* [섹션 1. 함수형 프로그래밍 개요](https://github.com/Jang-oi/TIL/blob/main/Inflearn/Section/Section1.md)
 ---
