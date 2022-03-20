@@ -16,5 +16,12 @@
 * [Programmers Level2](https://github.com/Jang-oi/TIL/tree/main/Algorithm/programmers/Level2)
 ---
 
+---
+## [Inflearn][Inflearn]
+
+* [자바스크립트로 알아보는 함수형 프로그래밍(ES5)](https://github.com/Jang-oi/TIL/tree/main/Algorithm/programmers/Level2)
+---
+
 [JavaScript]: /JavaScript
 [Algorithm]: /Algorithm
+[Inflearn]: /Inflearn
