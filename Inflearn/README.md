@@ -5,4 +5,5 @@
 ## SECTION
 
 * [섹션 1. 함수형 프로그래밍 개요](https://github.com/Jang-oi/TIL/blob/main/Inflearn/Section/Section1.md)
+* [섹션 2. 함수형으로 전환하기](https://github.com/Jang-oi/TIL/blob/main/Inflearn/Section/Section2.md)
 ---
