@@ -1,5 +1,5 @@
----
-목차
+# 목차
+
 ---
 
 ## [JavaScript][JavaScript]
@@ -10,16 +10,16 @@
 * [CSR, SSR](https://github.com/Jang-oi/TIL/blob/main/JavaScript/CSR,SSR.md)
 
 ---
-## [Algorithm][Algorithm]
+## [Algorithm]
 
 * [Programmers Level1](https://github.com/Jang-oi/TIL/tree/main/Algorithm/programmers/Level1)
 * [Programmers Level2](https://github.com/Jang-oi/TIL/tree/main/Algorithm/programmers/Level2)
 ---
 
----
-## [Inflearn][Inflearn]
+## [Inflearn]
 
-* [자바스크립트로 알아보는 함수형 프로그래밍(ES5)](https://github.com/Jang-oi/TIL/tree/main/Inflearn)
+* [자바스크립트로 알아보는 함수형 프로그래밍(ES5)](https://github.com/Jang-oi/TIL/tree/main/Inflearn/Programming)
+* [개발자면접을 위한 CS 전공지식](https://github.com/Jang-oi/TIL/tree/main/Inflearn/CS)
 ---
 
 [JavaScript]: /JavaScript
