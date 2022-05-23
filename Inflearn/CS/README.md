@@ -5,4 +5,5 @@
 ### SECTION
 
 * [www.naver.com을 입력해서 화면이 나타나기까지의 과정은 어떻게 되나요?](https://github.com/Jang-oi/TIL/blob/main/Inflearn/CS/Section1.md)
+* [데이터베이스 인덱스는 왜 효과적일까요?](https://github.com/Jang-oi/TIL/blob/main/Inflearn/CS/Section2.md)
 ---
